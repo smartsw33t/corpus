@@ -1,5 +1,5 @@
 ﻿English,Tamil
-The payment is due today., இன்று பணம் செலுத்த தவணை நாள்.
+The payment is due today.,பணம் செலுத்த இன்றே தவணை
 I just made the payment.,இப்போது நான் பணம் செலுத்தினேன்.
 Did you receive the payment?,உனக்குப் பணம் கிடைத்துவிட்டதா?
 It was a cash payment.,அது ரொக்கமாகச் செலுத்திய பணம்.
@@ -276,7 +276,7 @@ The chat session ended abruptly.,பேச்சு அமர்வு முட
 She often initiates the video chat.,அவர் அடிக்கடி வீடியோ பேச்சைத் தொடங்கி வைக்கிறார்.
 We can use the secure team chat.,பாதுகாவலான அணிப் பேச்சை நாம் பயன்படுத்தலாம்.
 He missed the important group chat.,அவர் முக்கியக் குழுப் பேச்சைத் தவறவிட்டார்.
-The chat feature is very popular.,இந்தப் பேச்சு அம்சம் மிகவும் பிரபலம்.
+The chat feature is very popular.,பேச்சு அம்சம் மிகவும் பிரபலம்.
 She often joins late-night chats.,அவர் அடிக்கடி நள்ளிரவுப் பேச்சுகளில் சேர்வார்.
 I received an urgent chat.,நான் அவசரப் பேச்சு ஒன்றைப் பெற்றேன்.
 They chatted about their plans.,அவர் தன் திட்டங்கள் குறித்துப் பேசினார்.
@@ -284,13 +284,51 @@ The whole conversation was just a chat.,ஒட்டுமொத்த உரை
 I don't want to chat right now.,இப்போது நான் பேச்சு மேற்கொள்ள விரும்பவில்லை.
 The system saves the chat automatically.,பேச்சை அமைப்பு அதுவாகவே சேமிக்கிறது.
 He is good at leading chats.,பேச்சுகளை அவர் நன்கு வழிநடத்துவார்.
-We need to stop chatting and work.,நாம் பேச்சை நிறுத்திவிட்டு வேலை செய்ய வேண்டும்.
+We need to stop chatting and work.,நாம் பேச்சு மேற்கொள்வதை நிறுத்திவிட்டு வேலை செய்ய வேண்டும்.
 I prefer face-to-face chats.,அவர் நேருக்கு நேர் பேச்சுகளுக்கு முன்னுரிமை அளிக்கிறார்.
 The chat flow was excellent.,பேச்சின் ஓட்டம் அருமை.
 She ended the text chat.,எழுத்துப் பேச்சை அவர் முடித்துவிட்டார்.
 He wants to chat about sports.,அவர் விளையாட்டுப்போட்டிகள் குறித்து பேச்சு மேற்கொள்ள விரும்புகிறார்.
 The old chats are archived now.,பழைய பேச்சுகள் இப்போது காப்பகத்துக்கு நகர்த்தப்பட்டன.
 Let's finish this chat quickly.,இந்தப் பேச்சை நாம் விரைவில் நிறைவுசெய்துவிடுவோம்.
-
-
-
+Accessibility means making sure everyone can use something.,பயன்படுத்தும்படி ஆக்குதல் என்றால் ஏதோ ஒன்றை எல்லோரும் பயன்படுத்த முடியும் என்பதை உறுதிசெய்தல்.
+"This applies to places, products, and information systems.","இது இடங்கள், பொருட்கள் மற்றும் தகவல் அமைப்புகளுக்கும் பொருந்தும்."
+The goal is inclusion for all people.,ஒவ்வொருவரையும் சேர்த்துக்கொள்வதே இதன் இலக்கு.
+This includes people living with various disabilities.,வெவ்வேறு குறைபாடுகளுடன் வாழ்பவர்கள் இதில் அடங்குவார்கள்.
+A disability is a condition that limits a person's interaction with the world.,குறைபாடு என்பது ஒரு நபர் உலகத்தோடு இணைந்து செயலாற்றுவதைத் தடுக்கும் ஒரு நிலைமை ஆகும்.
+Accessibility removes the barriers these conditions create.,பயன்படுத்தும்படி ஆக்குதல் இந்த நிலைமைகளால் உருவாக்கப்படும் தடைகளை அகற்றுகிறது.
+It ensures equal opportunity for everyone to participate fully.,ஒவ்வொருவரும் முழுவதும் பங்கேற்கக்கூடிய சம வாய்ப்பு கிடைப்பதை இது உறுதிசெய்கிறது.
+Categories of Disabilities.,குறைபாடுகளின் வகைகள்
+Visual Disabilities affect sight.,பார்வைக் குறைபாடுகள் பார்வையைப் பாதிக்கின்றன.
+This covers conditions from low vision to total blindness.,குறைவான பார்வை முதல் முழுப் பார்வை இழப்பு இதில் அடங்குகிறது.
+Hearing Disabilities affect the ability to perceive sound.,கேட்டல் குறைபாடு என்பது ஒலி கேட்கும் திறனைப் பாதிக்கிறது.
+People may be deaf or have significant hearing loss.,காது கேளாமலோ அல்லது கணிசமான அளவு கேட்கும் திறன் இழப்போ மக்களுக்கு இருக்கலாம்.
+Motor or Mobility Disabilities affect physical movement.,அசைதல் அல்லது நகர்தல் குறைபாடுகள் உடல் அசைவைப் பாதிக்கின்றன.
+This can involve using assistive devices like wheelchairs.,இதில் சர்க்கர நாற்காலிகள் போன்ற உதவிக் கருவிகளைப் பயன்படுத்துவது அடங்கலாம்.
+"Cognitive Disabilities affect thinking, learning, and memory.","அறிவாற்றல் குறைபாடு என்பது சிந்தித்தல், கற்றல் மற்றும் நினைவாற்றலைப் பாதிக்கலாம்."
+This group includes people with intellectual or learning differences.,இந்தக் குழுவில் அறிவாற்றல் அல்லது கற்றல் வேறுபாடுகள் கொண்டவர்கள் இருப்பார்கள்.
+Language Disabilities affect understanding a different language.,மொழிக் குறைபாடு என்பது வேறு ஒரு மொழியைப் புரிந்துகொள்ளும் திறனைப் பாதிக்கிறது.
+This means struggling to understand or express a language unknown to the person.,ஒரு நபருக்குத் தெரியாத மொழியைப் புரிந்துகொள்வதிலோ அந்த மொழியில் தன் சிந்தனையை வெளிப்படுத்துவதிலோ சிரமம் இருக்கிறது என்பது இதன் பொருள்.
+Websites and mobile apps nowadays come with different language options to give the content in the user's preferred language nowadays.,பயனரின் விருப்பமான மொழியில் படைப்புகளைக் கொடுப்பதற்காகத் தற்காலத்தில் வலைதளங்களும் அலைபேசி செயலிகளும் வெவ்வேறு மொழித் தெரிவுகளுடன் வருகின்றன.
+Also translation tools and devices are available for those who cannot communicate in a certain language. ,மேலும் குறிப்பிட்ட மொழியில் தகவல் தொடர்பு மேற்கொள்ள முடியாதவர்களுக்காக மொழிபெயர்ப்புக் கருவிகளும் சாதனங்களும் கிடைக்கின்றன. 
+It is important to know that many people have multiple disabilities.,பல்வேறு நபர்களுக்குப் பல்வேறு குறைபாடுகள் இருக்கின்றன என்பதை அறிந்துகொள்ள வேண்டியது அவசியம்.
+How Accessible Features Provide Support?,பயன்படுத்தும்படி ஆக்குதல் அம்சங்கள் எவ்வாறு உதவுகின்றன?
+These features directly address specific needs caused by disabilities.,இந்த அம்சங்கள் குறைபாடுகளால் ஏற்படும் குறிப்பிட்ட தேவைகளுக்குத் தீர்வு அளிக்கின்றன. 
+Click the link to view the new policy.,புது கொள்கையைக் காண இணைப்பைத் தொடுங்கள்.
+My Wi-Fi connection keeps dropping out.,வை-ஃபை பிணைப்பு தொடர்ந்து துண்டிக்கப்படுகிறது.
+She forgot to add the required attachment.,அவர் தேவையான சேர்க்கையைச் சேர்க்க மறந்துவிட்டார்.
+This short link takes you to the main page.,இந்தக் குறு இணைப்பு உங்களை முக்கிய பக்கத்திற்குக் கொண்டு செல்கிறது.
+A stable connection is needed for video calls.,வீடியோ அழைப்புகளுக்கு நிலையான பிணைப்பு தேவைப்படுகிறது.
+Please scan every received email attachment.,பெறப்படும் மின்னஞ்சல் சேர்க்கைகள் ஒவ்வொன்றையும் தயவுசெய்து பரிசோதியுங்கள்.
+We established a secure server connection.,பாதுகாவலான சர்வர் பிணைப்பை நாங்கள் ஏற்படுத்தினோம்.
+The ZIP file serves as a bundled attachment.,ஜிப் கோப்பு ஒரு தொகுக்கப்பட்ட சேர்க்கையாகச் செயல்படுகிறது.
+Follow the link in the newsletter.,செய்திமடலில் உள்ள இணைப்பைப் பின்தொடருங்கள்
+The poor connection slowed the download.,மோசமான பிணைப்பினால் பதிவிறக்கத்தின் வேகம் குறைந்தது.
+Is the spreadsheet attachment included?,ஸ்ப்ரெட்ஷீட் சேர்க்கை சேர்க்கப்பட்டுள்ளதா?
+The link structure impacts search engine ranking.,இணைப்பின் கட்டமைப்பு தேடல் பொறி மதிப்பீட்டில் தாக்கம் செய்யும்.
+Establish a proper network connection first.,முதலில் ஒரு முறையான வலைப் பிணைப்பை ஏற்படுத்துங்கள்.
+I saved the image attachment locally.,நான் படச் சேர்க்கையைச் சாதனத்தினுள் சேமித்தேன்.
+That external link redirects to another site.,வெளிப்புற இணைப்பு வேறொரு தளத்திற்குத் திசைதிருப்புகிறது.
+My computer has no internet connection.,என் கணிப்பொறியில் இணையப் பிணைப்பு இல்லை.
+The system limits the size of any attachment.,எந்தவொரு சேர்க்கையின் அளவையும் அமைப்பு கட்டுப்படுத்துகிறது.
+Paste the direct link into your browser.,நேரடி இணைப்பை உங்கள் உலாவியில் ஒட்டுங்கள்.
