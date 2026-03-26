@@ -2,9 +2,11 @@ class TamilSummarizer {
     constructor() {
         this.corpus = [];
         this.tamilCorpus = new Map();
+        this.machineHumanPairs = [];
+        this.humanizationPatterns = new Map();
         this.isLoading = false;
         this.initializeUI();
-        this.loadCorpus();
+        this.loadData();
     }
 
     initializeUI() {
@@ -51,16 +53,24 @@ class TamilSummarizer {
         });
     }
 
-    async loadCorpus() {
+    async loadData() {
         try {
             this.showLoading(true);
-            const response = await fetch('English Tamil Corpus Updated frequently.csv');
-            const csvText = await response.text();
-            this.parseCorpus(csvText);
+            
+            // Load corpus
+            const corpusResponse = await fetch('English Tamil Corpus Updated frequently.csv');
+            const corpusText = await corpusResponse.text();
+            this.parseCorpus(corpusText);
+            
+            // Load Machine vs Human Tamil from GitHub
+            const humanizationResponse = await fetch('https://raw.githubusercontent.com/smartsw33t/corpus/main/Machine%20Vs%20Human%20Tamil%20CSV.csv');
+            const humanizationText = await humanizationResponse.text();
+            this.parseHumanizationData(humanizationText);
+            
             this.showLoading(false);
         } catch (error) {
-            console.error('Error loading corpus:', error);
-            this.showError('Warning: Could not load Tamil corpus. Summarization may be less accurate.');
+            console.error('Error loading data:', error);
+            this.showError('Warning: Could not load corpus or humanization data. Summarization may be less accurate.');
             this.showLoading(false);
         }
     }
@@ -91,6 +101,49 @@ class TamilSummarizer {
                             this.tamilCorpus.set(word, []);
                         }
                         this.tamilCorpus.get(word).push(tamil);
+                    });
+                }
+            }
+        }
+    }
+
+    parseHumanizationData(csvText) {
+        const lines = csvText.split('\n');
+        const headers = this.parseCSVLine(lines[0]);
+        
+        const machineIndex = headers.findIndex(h => h.toLowerCase().includes('machine'));
+        const humanIndex = headers.findIndex(h => h.toLowerCase().includes('human') && !h.toLowerCase().includes('machine'));
+
+        for (let i = 1; i < lines.length; i++) {
+            const line = lines[i].trim();
+            if (!line) continue;
+
+            const values = this.parseCSVLine(line);
+            if (values.length > Math.max(machineIndex, humanIndex)) {
+                const machineText = values[machineIndex]?.trim();
+                const humanText = values[humanIndex]?.trim();
+                
+                if (machineText && humanText) {
+                    this.machineHumanPairs.push({ machine: machineText, human: humanText });
+                    
+                    // Extract words that were changed
+                    const machineWords = this.tokenizeTamil(machineText);
+                    const humanWords = this.tokenizeTamil(humanText);
+                    
+                    // Store machine→human word mappings for humanization
+                    machineWords.forEach(word => {
+                        if (!this.humanizationPatterns.has(word)) {
+                            this.humanizationPatterns.set(word, []);
+                        }
+                        // Add human alternatives
+                        if (humanWords.length > 0) {
+                            const humanAlts = this.humanizationPatterns.get(word);
+                            humanWords.forEach(hw => {
+                                if (!humanAlts.includes(hw)) {
+                                    humanAlts.push(hw);
+                                }
+                            });
+                        }
                     });
                 }
             }
@@ -179,21 +232,36 @@ class TamilSummarizer {
     }
 
     humanizeText(text) {
-        // Use corpus to find more natural alternatives
-        const words = this.tokenizeTamil(text);
+        // Apply humanization patterns from machine vs human pairs
         let humanized = text;
-
-        // For each word, if it's in corpus, it's already validated as natural
-        // This is a simple humanization - in production, would use more sophisticated NLP
-        for (const word of words) {
-            if (this.tamilCorpus.has(word)) {
-                // Word is in corpus, so it's validated as natural Tamil
-                // Keep it as is
-                continue;
+        
+        // Process the text to find and replace machine-like patterns with human alternatives
+        for (const [machineWord, humanAlternatives] of this.humanizationPatterns) {
+            if (humanAlternatives.length > 0) {
+                // Use the first human alternative (most common replacement)
+                const humanWord = humanAlternatives[0];
+                
+                // Replace word boundaries to avoid partial matches
+                const regex = new RegExp(`\\b${this.escapeRegex(machineWord)}\\b`, 'gi');
+                humanized = humanized.replace(regex, humanWord);
             }
         }
-
+        
+        // Additional humanization: validate all words against corpus
+        const words = this.tokenizeTamil(humanized);
+        let finalScore = 0;
+        words.forEach(word => {
+            if (this.tamilCorpus.has(word)) {
+                finalScore++;
+            }
+        });
+        
+        // The text is now humanized with real alternatives from the dataset
         return humanized;
+    }
+
+    escapeRegex(string) {
+        return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     }
 
     summarize() {
@@ -240,7 +308,7 @@ class TamilSummarizer {
                 // Build summary
                 let summary = topSentences.join('। ');
                 
-                // Humanize the summary
+                // HUMANIZE THE SUMMARY - Apply machine vs human patterns
                 summary = this.humanizeText(summary);
 
                 // If summary is still too long, truncate intelligently
@@ -268,6 +336,7 @@ class TamilSummarizer {
                     summary += '।';
                 }
 
+                // DISPLAY ONLY HUMANIZED SUMMARY
                 document.getElementById('outputText').value = summary;
                 this.updateStats('output');
                 this.showSuccess('Summary generated successfully!');
